@@ -11,10 +11,10 @@ const yinYang = {
         de: "Ein einfaches Brettspiel, aber mit viel Strategie. Sie können lokal zu zweit oder im Einzelspielermodus mit verschiedenen Schwierigkeitsgraden spielen."
     },
     images: [
-        '/src/assets/Images/yinYang/image1.jpg',
-        '/src/assets/Images/yinYang/image2.jpg',
-        '/src/assets/Images/yinYang/image3.jpg',
-        '/src/assets/Images/yinYang/image4.jpg',
+        '/public/Images/yinYang/image1.jpg',
+        '/public/Images/yinYang/image2.jpg',
+        '/public/Images/yinYang/image3.jpg',
+        '/public/Images/yinYang/image4.jpg',
     ],
     detailedDescription: null
 }
@@ -31,11 +31,11 @@ const catsAndDogs = {
         de: "Ein einfaches Brettspiel, aber mit viel Strategie. Sie können lokal zu zweit oder im Einzelspielermodus mit verschiedenen Schwierigkeitsgraden spielen."
     },
     images: [
-        '/src/assets/Images/catsanddogs/pic1.jpg',
-        '/src/assets/Images/catsanddogs/pic2.jpg',
-        '/src/assets/Images/catsanddogs/pic3.jpg',
-        '/src/assets/Images/catsanddogs/pic4.jpg',
-        '/src/assets/Images/catsanddogs/pic5.jpg'
+        '/public/Images/catsanddogs/pic1.jpg',
+        '/public/Images/catsanddogs/pic2.jpg',
+        '/public/Images/catsanddogs/pic3.jpg',
+        '/public/Images/catsanddogs/pic4.jpg',
+        '/public/Images/catsanddogs/pic5.jpg'
     ],
     detailedDescription: {
         en: (
@@ -90,9 +90,9 @@ const oJogoDaClarinha = {
         de: "Ein personalisiertes Memory-Kartenspiel, das als Weihnachtsgeschenk für meine Nichte entwickelt wurde und auf ihre speziellen Interessen und Vorlieben zugeschnitten ist. Dieses spannende Spiel wurde mit JavaScript entwickelt und soll herausfordern und unterhalten, während es gleichzeitig die Familienbindung und die kognitive Entwicklung durch interaktive Gedächtnisübungen fördert."
     },
     images: [
-        '/src/assets/Images/oJogoDaClarinha/pic1.jpg',
-        '/src/assets/Images/oJogoDaClarinha/pic2.jpg',
-        '/src/assets/Images/oJogoDaClarinha/pic3.jpg',
+        '/public/Images/oJogoDaClarinha/pic1.jpg',
+        '/public/Images/oJogoDaClarinha/pic2.jpg',
+        '/public/Images/oJogoDaClarinha/pic3.jpg',
     ],
     detailedDescription: {
         en: (
@@ -148,9 +148,9 @@ const jammming = {
         de: "Ein personalisiertes Memory-Kartenspiel, das als Weihnachtsgeschenk für meine Nichte entwickelt wurde und auf ihre speziellen Interessen und Vorlieben zugeschnitten ist. Dieses spannende Spiel wurde mit JavaScript entwickelt und soll herausfordern und unterhalten, während es gleichzeitig die Familienbindung und die kognitive Entwicklung durch interaktive Gedächtnisübungen fördert."
     },
     images: [
-        '/src/assets/Images/jammming/pic1.jpg',
-        '/src/assets/Images/jammming/pic2.jpg',
-        '/src/assets/Images/jammming/pic3.jpg',
+        '/public/Images/jammming/pic1.jpg',
+        '/public/Images/jammming/pic2.jpg',
+        '/public/Images/jammming/pic3.jpg',
     ],
     detailedDescription: {
         en: (
@@ -202,10 +202,10 @@ const retroHub = {
     gitHubLink: "https://github.com/davidrfarinha/react-retro-hub",
     link: "https://retro-hub.netlify.app/",
     images: [
-        '/src/assets/Images/retrohub/image1.jpg',
-        '/src/assets/Images/retrohub/image2.jpg',
-        '/src/assets/Images/retrohub/image3.jpg',
-        '/src/assets/Images/retrohub/image4.jpg',
+        '/public/Images/retrohub/image1.jpg',
+        '/public/Images/retrohub/image2.jpg',
+        '/public/Images/retrohub/image3.jpg',
+        '/public/Images/retrohub/image4.jpg',
     ],
     detailedDescription: {
         en: (
