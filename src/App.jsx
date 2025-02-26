@@ -5,7 +5,7 @@ import HomePage from './Pages/HomePage';
 import Layout from './Pages/Layout';
 import About from './Pages/About';
 import Projects from './Pages/Projects';
-import ProjectDetails from './Pages/projectDetails';
+import ProjectDetails from './Pages/ProjectDetails';
 import Contacts from './Pages/Contacts';
 export default function App() {
   const router = createBrowserRouter(createRoutesFromElements(
