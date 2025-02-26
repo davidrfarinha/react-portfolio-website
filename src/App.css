@@ -1,0 +1,535 @@
+* {
+  box-sizing: border-box;
+  /* border: 1px solid yellow; */
+}
+
+:root {
+  --black: #121212;
+  --darkgrey: #151515;
+  --lightgrey: #1A1A1A;
+  --white: #D3D3D3;
+  --blue: #1B03A3;
+  --red: #FF3131;
+  --purple: #B026FF;
+  --yellow: #ccff15;
+  --blue2: rgba(27, 3, 163, 0, 1)
+}
+
+
+/* GENERAL STYLES */
+body {
+  background-color: var(--black);
+  font-family: "Lato", serif;
+  color: var(--white);
+  margin: 0;
+  min-height: 100dvh;
+  min-block-size: 100dvh;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+h3 {
+  text-align: center;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+  display: inline;
+}
+
+p {
+  color: var(--white);
+  font-size: 1.2rem;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+a {
+  color: #D3D3D3;
+  text-decoration: none;
+}
+
+code {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-right: 0.2em;
+}
+
+.gradient-text {
+  font-family: "Bebas Neue", serif;
+  display: flex;
+  width: fit-content;
+  padding: 2rem;
+  margin: 0;
+  font-weight: 100;
+  background-clip: text;
+  background-image: linear-gradient(to left, var(--blue), var(--red));
+  color: #121212;
+  -webkit-text-stroke-color: transparent;
+  -webkit-text-stroke-width: 5px;
+  text-shadow: rgba(255, 255, 255, 0.1) 0px 0px 20px;
+}
+
+.box-shadow {
+  box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.15), -5px -5px 20px rgba(0, 0, 0, 0.3);
+  /* box-shadow: rgba(255, 255, 255, 0.15) 0px 10px 20px, rgba(255, 255, 255, 0.05) 0px 5px 10px; */
+}
+
+.big-david-farinha {
+  font-size: 12vw;
+  letter-spacing: 6dvw;
+}
+
+.small-david-farinha {
+  font-size: 8vw;
+  letter-spacing: 3dvw;
+  margin-left: 3vw;
+}
+
+.page-title {
+  font-size: 3rem;
+  letter-spacing: 2px;
+  text-align: center;
+  margin: 3rem auto;
+}
+
+/* HOME PAGE STYLES */
+.home-page {
+  width: 100dvw;
+  height: 100dvh;
+  display: grid;
+  grid-template-areas:
+    "top top"
+    "greeting mainnavbar"
+    "bottom bottom";
+  grid-template-rows: 1fr 5fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  font-family: "Bebas Neue", serif;
+  letter-spacing: 0.2rem;
+  color: #D3D3D3;
+  font-size: 2rem;
+}
+
+.home-page p {
+  font-size: 2rem;
+}
+
+.main-navbar ul {
+  display: flex;
+  flex-wrap: wrap;
+  text-decoration: underline;
+}
+
+.top {
+  display: flex;
+  justify-content: flex-end;
+  grid-area: top;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+}
+
+.bottom {
+  display: flex;
+  justify-content: flex-start;
+  grid-area: bottom;
+}
+
+.greeting {
+  grid-area: greeting;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main-navbar {
+  grid-area: mainnavbar;
+  display: flex;
+}
+
+/* PROJECTS PAGE STYLES */
+.projects {
+  margin: 3rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+}
+
+.project-thumbnail {
+  margin: 2rem 3rem;
+  display: flex;
+  text-decoration: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transition: transform 0.2s ease-in-out;
+  aspect-ratio: 5/4;
+}
+
+.gradient-border {
+  border: double 2px transparent;
+  border-radius: 0.5rem;
+  background-image: linear-gradient(var(--black), var(--black)), radial-gradient(circle at top left, var(--red), var(--blue));
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.project-thumbnail:hover {
+  background-image: linear-gradient(var(--darkgrey), var(--darkgrey)), radial-gradient(circle at top left, var(--red), var(--blue));
+  transform: scale(1.1, 1.1);
+}
+
+.project-thumbnail h3 {
+  font-size: 1.5rem;
+
+}
+
+.project-thumbnail h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.container-thumbnail-picture {
+  position: relative;
+  width: 90%;
+  height: 60%;
+  margin: 1rem;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.thumbnail-picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  transition: opacity 1s ease-in-out;
+}
+
+.thumbnail-picture.active {
+  opacity: 1;
+}
+
+/* PROJECT DETAILS STYLES*/
+.project {
+  max-width: 800px;
+  margin: auto;
+  padding: 0 3rem;
+  margin-bottom: 200px;
+}
+
+.slide-show {
+  position: relative;
+  margin: 2rem auto;
+  width: 600px;
+  height: 300px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* .project h2 {
+  font-family: "Bebas Neue", serif;
+}
+.project h3 {
+  font-family: "Bebas Neue", serif;
+} */
+
+
+.project h4 {
+  text-decoration: underline;
+}
+
+.project li {
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.link {
+  margin-bottom: 1rem;
+}
+.link h4 {
+  display: inline;
+}
+.project a {
+  margin-left: 1rem;
+}
+
+.project a:hover {
+  cursor: pointer;
+}
+
+.back-button {
+  position: fixed;
+  display: flex;
+  width: fit-content;
+  font-size: 1.2rem;
+  margin-left: 2rem;
+  z-index: 1;
+}
+
+.back-button .back-button-content {
+  margin: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.back-button svg {
+  width: 32px;
+  margin-right: 1rem;
+}
+
+.back-button span {
+  display: block;
+}
+
+/* ABOUT PAGE STYLES */
+.about {
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 3rem;
+    margin-bottom: 200px;
+}
+
+.icons-container {
+  display: flex;
+  justify-content: center;
+  margin: 0 50px;
+  flex-wrap: wrap;
+}
+
+.about-icons {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100px;
+  height: 100px;
+}
+
+.about svg {
+  width: 32px;
+  margin: 0 1rem 1rem 1rem;
+}
+
+.tech-name {
+  margin: 1rem 1rem 0 1rem;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.about ul {
+  margin: auto;
+  width: 80%;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+/* CONTACTS PAGE STYLES */
+
+.contacts {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.contacts-list {
+  width: fit-content;
+  margin: auto;
+}
+
+.contacts li {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.contacts-svg {
+  width: 50px;
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+
+/* BURGER MENU STYLES */
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  right: 16px;
+  top: 16px;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/* Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases */
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: black;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.5em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  padding: 0.8em;
+  font-family: "Bebas Neue", serif;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.lato-thin {
+  font-family: "Lato", serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.lato-light {
+  font-family: "Lato", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.lato-regular {
+  font-family: "Lato", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lato-bold {
+  font-family: "Lato", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.lato-black {
+  font-family: "Lato", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.lato-thin-italic {
+  font-family: "Lato", serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.lato-light-italic {
+  font-family: "Lato", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.lato-regular-italic {
+  font-family: "Lato", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.lato-bold-italic {
+  font-family: "Lato", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.lato-black-italic {
+  font-family: "Lato", serif;
+  font-weight: 900;
+  font-style: italic;
+}
