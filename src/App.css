@@ -111,6 +111,7 @@ li {
   margin: 3rem auto;
 }
 
+
 /* HOME PAGE STYLES */
 .home-page {
   width: 100dvw;
@@ -128,9 +129,27 @@ li {
   font-size: 2rem;
 }
 
-.home-page p {
-  font-size: 2rem;
+@media (orientation: portrait) {
+  .home-page {
+    grid-template-areas:
+      "top"
+      "greeting"
+      "mainnavbar"
+      "bottom";
+    grid-template-rows: 2fr 1fr 1fr 2fr;
+    grid-template-columns: 1fr;
+  }
+
+  .home-page-text {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .center {
+    margin: auto;
+  }
 }
+
+
 
 .main-navbar ul {
   display: flex;
@@ -146,8 +165,12 @@ li {
 
 .center {
   display: flex;
+  max-width: 90%;
   align-items: center;
-  margin: 1rem;
+  margin: 1rem auto;
+}
+.home-page-text {
+  font-size: 2rem;
 }
 
 .bottom {
@@ -159,12 +182,13 @@ li {
 .greeting {
   grid-area: greeting;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .main-navbar {
   grid-area: mainnavbar;
   display: flex;
+  justify-content: center;
 }
 
 /* PROJECTS PAGE STYLES */
@@ -269,9 +293,11 @@ li {
 .link {
   margin-bottom: 1rem;
 }
+
 .link h4 {
   display: inline;
 }
+
 .project a {
   margin-left: 1rem;
 }
@@ -306,10 +332,10 @@ li {
 
 /* ABOUT PAGE STYLES */
 .about {
-    max-width: 1000px;
-    margin: auto;
-    padding: 0 3rem;
-    margin-bottom: 200px;
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 3rem;
+  margin-bottom: 200px;
 }
 
 .icons-container {
